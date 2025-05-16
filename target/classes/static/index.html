@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="storeApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление Магазинами</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="StoreController">
+
+<h1>Список Магазинов</h1>
+<ul>
+    <li ng-repeat="store in stores">
+        {{ store.name }}
+        <button ng-click="deleteStore(store.id)">Удалить</button>
+    </li>
+</ul>
+
+<h2>Добавить Новый Магазин</h2>
+<input type="text" ng-model="newStoreName" placeholder="Название магазина">
+<button ng-click="addStore()">Добавить</button>
+
+<script src="app.js"></script>
+</body>
+</html>

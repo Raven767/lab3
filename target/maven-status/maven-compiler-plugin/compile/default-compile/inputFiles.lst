@@ -1,0 +1,11 @@
+D:\subjects\TDIS\lab2\src\main\java\electronics\store\Application.java
+D:\subjects\TDIS\lab2\src\main\java\electronics\store\config\ControllersConfig.java
+D:\subjects\TDIS\lab2\src\main\java\electronics\store\config\SecurityConfiguration.java
+D:\subjects\TDIS\lab2\src\main\java\electronics\store\config\SpringDocConfig.java
+D:\subjects\TDIS\lab2\src\main\java\electronics\store\db\dao\StoreRepository.java
+D:\subjects\TDIS\lab2\src\main\java\electronics\store\db\model\ProductPE.java
+D:\subjects\TDIS\lab2\src\main\java\electronics\store\db\model\StorePE.java
+D:\subjects\TDIS\lab2\src\main\java\electronics\store\rest\model\StoreDTO.java
+D:\subjects\TDIS\lab2\src\main\java\electronics\store\rest\StoreRestController.java
+D:\subjects\TDIS\lab2\src\main\java\electronics\store\service\StoreService.java
+D:\subjects\TDIS\lab2\src\main\java\electronics\store\service\StoreServiceImpl.java

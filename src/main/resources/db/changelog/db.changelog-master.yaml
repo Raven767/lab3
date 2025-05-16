@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: init-database
+      author: solarrm
+      preConditions:
+        - onFail: HALT
+          not:
+            tableExists:
+              tableName: STORE
+      changes:
+        - createTable:
+            tableName: STORE
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: store_pkey
+                  name: storeID
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: storeName
+                  type: VARCHAR(255)
+        - createTable:
+            tableName: PRODUCT
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: product_pkey
+                  name: productID
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: productName
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: store_id
+                  type: BIGINT
+
+        - addForeignKeyConstraint:
+            baseColumnNames: store_id
+            baseTableName: product
+            constraintName: fk_product_to_store
+            referencedColumnNames: storeID
+            referencedTableName: store
